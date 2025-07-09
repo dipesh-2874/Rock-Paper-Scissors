@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", Sans-Serif;
+}
+
+.loader{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+.loader .box{
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    border-top: .3rem solid #00ffd5;
+    animation: rotate 1s infinite linear;
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+body{
+    text-align: center;
+    background-color: rgb(25, 26, 27);
+    color: antiquewhite;
+    cursor: default;
+}
+
+.header{
+    background-color: #081b31;
+    color: antiquewhite;
+    height: 5rem;
+    line-height: 5rem;
+    text-shadow: -3px 3px 6px black;
+    box-shadow: 0px 2px 6px black;
+}
+
+.choices,
+.scorecard{
+    display: flex;
+    grid-gap: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.scorecard{
+    margin-bottom: 3rem;
+}
+
+.choice{
+    height: 180px;
+    width: 180px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.choice img{
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
+}
+
+.choice.rock img{
+    box-shadow: 2px 2px 8px rgb(255, 134, 243);
+}
+
+.choice.scissors img{
+    box-shadow: 2px 2px 8px antiquewhite;
+}
+
+.choice.paper img{
+    box-shadow: 2px 2px 8px rgb(110, 250, 250);
+}
+
+.choice img:hover{
+    transform: scale(0.98);
+    box-shadow: 0px 1px 5px black;
+    opacity: .5;
+    cursor: pointer;
+}
+
+.scorecard .Score{
+    width: 50px;
+    text-shadow: 2px 2px 6px black;
+}
+
+.scorecard h4{
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.scorecard p{
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.msg-container p{
+    display: inline;
+    padding: 7px 7px 7px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 5px 5px 6px black;
+}
+
+.warning{
+    font-size: .7rem;
+    color: red;
+    display: none;
+}
